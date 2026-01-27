@@ -1,1 +1,13 @@
+/* Custom styles (Tailwind handles most layout) */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+#content p {
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
 

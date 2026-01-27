@@ -20,3 +20,7 @@ function fetchBreeds() {
     });
 }
 
+function fetchBreeds() {
+  console.log("Breeds button clicked");
+
+

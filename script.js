@@ -1,21 +1,21 @@
-// 1. Находим элементы в HTML по их ID
+// 1. find elements in HTML by their ID
 const contentDiv = document.getElementById("content");
 const breedsBtn = document.getElementById("breedsBtn");
 const imagesBtn = document.getElementById("imagesBtn");
 
-// 2. Обработка нажатия на кнопку Breeds
+// 2. click on button Breeds
 breedsBtn.addEventListener("click", () => {
-    // Очищаем контейнер перед загрузкой новых данных
+    // clear before adding new data
     contentDiv.innerHTML = "<p class='text-center w-full'>Loading breeds...</p>";
 
-    // Здесь позже появится функция fetchBreeds()
+    // later will add fetchBreeds()
     console.log("Breeds button clicked!");
 });
 
-// 3. Обработка нажатия на кнопку Images
+// 3. click on button Images
 imagesBtn.addEventListener("click", () => {
     contentDiv.innerHTML = "<p class='text-center w-full'>Loading images...</p>";
 
-    // Здесь позже появится функция fetchImages()
+    // later will add fetchImages()
     console.log("Images button clicked!");
 });

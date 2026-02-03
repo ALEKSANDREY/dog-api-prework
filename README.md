@@ -1,29 +1,50 @@
 # Dog API Explorer
 
-A clean, responsive web application that allows users to explore data from **The Dog API**. This project was developed as part of the Advanced Pre-Work assignment for Code the Dream.
+A clean, responsive web application that allows users to explore data from **The Dog API**. This project was developed as part of the Advanced Pre-Work assignment for **Code the Dream**, focusing on asynchronous data fetching and secure API management.
 
 ## Features
-- **Breed Discovery**: Fetches a list of dog breeds, displaying their names and breed groups directly from the API.
-- **Random Image Gallery**: Retrieves 6 random high-quality dog images for a dynamic user experience.
-- **Responsive Layout**: Uses Tailwind CSS and custom CSS to ensure the site looks great on desktops, tablets, and mobile devices.
-- **Error Handling**: Includes robust error catching to notify the user if the API request fails.
+- **Breed Discovery**: Fetches a list of dog breeds from the `/breeds` endpoint. Clicking a breed name triggers a specific search to show images of that breed.
+- **Interactive Image Gallery**: Retrieves random dog images. Clicking any image reveals the breed name via a browser alert.
+- **Secure API Key Management**: Utilizes Vite environment variables and a `.env` file to keep API credentials secure and out of the public repository.
+- **Responsive Layout**: Uses a CSS Grid layout to ensure the site remains functional and attractive on all devices.
 
 ## How to Run the Project
 1. **Download/Clone**: Download this repository to your local machine.
-2. **Open index.html**: Locate the `index.html` file in the project folder and open it in any modern web browser (Google Chrome, Firefox, or Microsoft Edge).
-3. **Interact**: Click the "View Breeds" or "View Images" buttons to see data retrieved in real-time.
+2. **Install Dependencies**: Open your terminal in the project folder and run:
+   ```bash
+   npm install
+Configure API Key:
 
-## Project Structure
-- `index.html`: The core structure and layout of the application.
-- `styles.css`: Custom CSS for animations (like the loading pulse) and hover effects.
-- `script.js`: The "brain" of the app, using the JavaScript Fetch API to interact with the Dog API end-points.
-- `.gitignore`: Configured to keep the repository clean by excluding IDE-specific folders (like `.idea/`).
+Create a file named .env in the root directory.
 
-## Technologies Used
-- **HTML5 & JavaScript (ES6+)**: For structure and dynamic data fetching.
-- **Tailwind CSS**: For a modern, utility-first design approach.
-- **The Dog API**: A public API used as the data source for breeds and images.
+Add your key: VITE_DOG_API_KEY=your_actual_key_here
 
-## Developer Notes
-- This project follows best practices by keeping the structure (HTML), style (CSS), and logic (JS) in separate files.
-- The UI is designed for accessibility with clear font sizes and high-contrast colors.
+Start Development Server: Run the following command in the terminal:
+
+Bash
+
+npm run dev
+View App: Open your browser to the local address provided (usually http://localhost:5173).
+
+Project Structure
+index.html: The core structure and entry point for the Vite application.
+
+styles.css: Custom CSS for grid layouts, hover effects, and responsive design.
+
+script.js: The "brain" of the app, containing the Fetch API logic and event listeners for interactivity.
+
+.env: (Private) Stores the API key securely. This file is ignored by Git.
+
+.gitignore: Configured to exclude node_modules/ and the .env file from version control.
+
+Technologies Used
+JavaScript (ES6+): For dynamic data fetching and DOM manipulation.
+
+Vite: A modern build tool used for fast development and environment variable management.
+
+The Dog API: The primary data source for all breed information and images.
+
+Developer Notes
+Security Best Practices: This project follows professional standards by using a .env file to prevent sensitive API keys from being pushed to public repositories.
+
+Interactive Logic: The application implements "connected logic," where data from the Breeds endpoint is used to filter results in the Images endpoint.
